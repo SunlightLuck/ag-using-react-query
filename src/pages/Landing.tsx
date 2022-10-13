@@ -1,16 +1,11 @@
-import React, { useState, useRef, useMemo, useCallback} from 'react';
-import { useQuery } from 'react-query'
+import React, { useState, useRef, useMemo, useCallback, useContext} from 'react';
 import { AgGridReact } from 'ag-grid-react'; // the AG Grid React Component
 import { Box } from '@mui/material'
 import styled from '@mui/styled-engine-sc'
-import fetchPosts from './fetchApi';
 
+import { ApiContext } from "../Provider";
 import 'ag-grid-community/styles/ag-grid.css'; // Core grid CSS, always needed
 import 'ag-grid-community/styles/ag-theme-alpine.css'; // Optional theme CSS
-
-interface ApiError {
-  message: string;
-}
 
 const Landing: React.FC = () => {
   const gridRef = useRef<any>();
@@ -28,7 +23,7 @@ const Landing: React.FC = () => {
     console.log('cellClicked', event);
   }, []);
 
-  const { data, error, isError, isLoading } = useQuery<Array<any>, ApiError>('users', fetchPosts)
+  const { data, error, isError, isLoading } = useContext(ApiContext);
   if (isLoading) {
     return <div>Loading...</div>
   }
