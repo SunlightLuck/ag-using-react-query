@@ -1,0 +1,13 @@
+html {
+  background: #0c0a18;
+  line-height: 1.5;
+  tab-size: 4;
+}
+body {
+  font-family: inherit;
+}
+html, body, #__next {
+  min-height: 100%;
+  margin: 0px;
+  background-repeat: no-repeat;
+}
