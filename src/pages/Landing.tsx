@@ -22,7 +22,8 @@ const Landing: React.FC = () => {
   }), []);
 
   const cellClickedListener = useCallback((event: any) => {
-    console.log('cellClicked', event);
+    // console.log('cellClicked', event);
+    // console.log('cellClicked', event);
   }, []);
 
   const { data, error, isError, isLoading } = useContext(ApiContext);
