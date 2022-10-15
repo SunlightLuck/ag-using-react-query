@@ -12,9 +12,9 @@ const Landing: React.FC = () => {
   const gridRef = useRef<any>();
   const [columnDefs] = useState([
     {field: 'make', filter: true},
-    // {field: 'make', filter: true},
     {field: 'model', filter: true},
     {field: 'price'}
+    // {field: 'price'}
   ]);
 
   const defaultColDef = useMemo(()=> ({
