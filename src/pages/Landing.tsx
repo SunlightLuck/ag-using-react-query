@@ -8,6 +8,7 @@ import 'ag-grid-community/styles/ag-grid.css'; // Core grid CSS, always needed
 import 'ag-grid-community/styles/ag-theme-alpine.css'; // Optional theme CSS
 
 const Landing: React.FC = () => {
+  // const gridRef = useRef<any>();
   const gridRef = useRef<any>();
   const [columnDefs] = useState([
     {field: 'make', filter: true},
